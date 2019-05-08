@@ -1,0 +1,29 @@
+
+<style>
+
+/*can select first letter*/
+
+h1::first-letter {
+  font-size: 70px;
+  font-style: italic;
+  color: goldenrod;
+}
+
+/*insert content before content*/
+h1::before {
+  content: "This is ";
+  /*maintains first-letter color*/
+  color: green;
+}
+
+h1::after {
+  content: " jargon bull!!";
+  color: blue;
+}
+
+
+
+</style>
+
+
+<h1>Heading</h1>

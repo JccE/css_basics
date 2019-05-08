@@ -1,0 +1,64 @@
+<!-- pseudo classes and elements. closely related to links
+
+pseudo classes define special state of an element
+they use the :
+ex:   a:hover
+
+pseudo elements define style for specific part of an element
+they use ::
+ex:   h1::after
+ -->
+
+<style>
+
+/*these below have to be in order*/
+/*define normal state of link before someone visits it*/
+/*  a:link {
+    font-size: 35px;
+    text-decoration: none;
+    color: brown;
+  }
+
+  a:visited {
+    color: goldenrod;
+  }
+
+  a:hover {
+    color: red;
+  }*/
+
+/*defines style of link while it is selected*/
+/*  a:active {
+    color: skyblue;
+  }*/
+
+/*///////////////////////*/
+
+
+
+
+/*for dropdown, you should hide items*/
+.dropdown-content a {
+  display: none;
+}
+
+/*select what you want to hover over*/
+.dropdown:hover .dropdown-content a {
+  display: block;
+
+}
+
+</style>
+
+
+<!-- <a href="https://www.google.com">Click Here</a> -->
+
+
+<div class="dropdown">
+  <a href="#">Items</a>
+  <div class="dropdown-content">
+    <a href="#">Item 1</a>
+    <a href="#">Item 2</a>
+    <a href="#">Item 3</a>
+  </div>
+</div>

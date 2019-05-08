@@ -1,0 +1,52 @@
+<!-- The Box Model consists of 4 parts:
+Margin
+Border
+Padding - clears area around content
+Content
+ -->
+
+<style>
+  body {
+    margin: 0;
+  }
+
+  h1 {
+/*    border-width: 5px;
+    border-style: solid;
+    border-color: #f00;*/
+    /*we can do all this in one line*/
+    border: 5px solid #f00;
+/*    padding-top:30px ;
+    padding-right:50px;
+    padding-bottom: 70px;
+    padding-left: 90px;*/
+    /*also in one line*/
+    /*padding: 30px 50px 70px 90px;*/
+    /*or*/
+    /*padding: 50px 100px;*/
+    /*or same value on all sides*/
+    padding: 50px;
+    /*margin kind of pushes content towards center*/
+/*    margin-top: 100px;
+    margin-right: 50px;
+    margin-bottom: 100px;
+    margin-left: 200px;*/
+    /*margin: 50px 50px;*/
+    /*horizontally center object by placing auto*/
+    margin: 100px auto;
+    /*box sizing*/
+    /*element width and height*/
+    width:300px;
+    height:300px;
+    /*default value*/
+    /*box-sizing: content-box;*/
+    /*include padding for total width and height*/
+    box-sizing: border-box;
+  }
+
+</style>
+
+ <h1>
+   Box Model
+ </h1>
+

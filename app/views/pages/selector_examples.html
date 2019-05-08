@@ -1,0 +1,42 @@
+---SELECTOR COMBINATORS---
+
+<section>
+  <p></p>
+  <h1></h1>
+  <p></p>
+  <p></p>
+  <div>
+    <p></p>
+  </div>
+  <p></p>
+  <p></p>
+</section>
+
+Descendant
+Selects all p's in section
+section p {
+  background-color: red;
+}
+
+Child >
+Selects all immediate children of specified element
+section > p {
+  background-color: red;
+}
+
+Adjacent sibling +
+Selects immediately following sibling of specified element
+h1 + p {
+  background-color: red;
+}
+
+General sibling ~
+Selects all siblings placed after specified element
+h1 ~ p {
+  background-color: red;
+}
+
+
+
+
+

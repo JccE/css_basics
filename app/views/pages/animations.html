@@ -1,0 +1,110 @@
+<!--
+with animations, we need to use keyframes
+
+in order to link from and to together, we have to use new props
+
+instead of from and to, we can use % values
+
+-->
+
+
+<style>
+  .box {
+    width: 200px;
+    height: 200px;
+    background-color: orangered;
+    /*assign as relative so you can work on it and have access to those restrictions*/
+    position: relative;
+    /*these have to be used to link the two together*/
+    animation-name: anie;
+    /*have to have duration. default is 0*/
+    animation-duration: 4s;
+    /*animation-delay: 2s;*/
+    /*Control how many times you want animation to run*/
+    animation-iteration-count: 2;
+    /*animation-iteration-count: infinite;*/
+    /* 4 values, default is normal*/
+    /*animation-direction: normal;*/
+    /*animation-direction: reverse;*/
+    animation-direction: alternate-reverse;
+    animation-timing-function: cubic-bezier(.23,.45,.99,.78);
+  }
+
+@keyframes anie {
+  0% {
+    left:0;
+    top:0;
+    background-color: orangered;
+  }
+  25% {
+    left:500px;
+    top:0;
+    background-color: green;
+  }
+  50% {
+    left:500px;
+    top:500px;
+    background-color: goldenrod;
+  }
+
+  75% {
+    left:0px;
+    top:500px;
+    background-color: royalblue;
+  }
+  100% {
+    left:0px;
+    top:0;
+    background-color: yellow;
+  }
+}
+
+
+
+
+
+
+
+
+
+/*@keyframes anie {
+  define start of animation
+  0% {
+    left:0;
+    top:0;
+    background-color: orangered;
+  }
+  define end of animation
+  100% {
+    left:500px;
+    top:0;
+    background-color: green;
+  }
+}
+*/
+
+
+
+
+
+/*we can make up any name we wont*/
+/*@keyframes anie {*/
+  /*define start of animation*/
+/*  from {
+    left:0;
+    top:0;
+    background-color: orangered;
+  }
+  to {
+    left:500px;
+    top:0;
+    background-color: green;
+  }
+}
+*/
+
+</style>
+
+
+
+<div class="box"></div>

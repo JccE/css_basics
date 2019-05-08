@@ -1,0 +1,49 @@
+<!--
+
+2-D
+3-D
+
+ -->
+
+
+<style>
+
+  .box {
+    width: 200px;
+    height: 200px;
+    background-color: orangered;
+    font-size: 60px;
+    color: #fff;
+    text-align: center;
+    margin: 100px auto;
+    padding-top: 55px;
+    box-sizing: border-box;
+    /*move element horizontally along the x axix*/
+    /*transform: translateX(100px);*/
+    /*transform: translateY(100px);*/
+    /*transition: transform 1s;*/
+    transition: transform 1s;
+
+  }
+
+  .box:hover {
+    /*transform: translate(100px, 100px);*/
+    /*transform: rotate(-90deg);*/
+    /*takes width and height*/
+    /*default at 1,1*/
+    /*transform: scale(2,2);*/
+    /*stretch*/
+    /*transform: scaleX(2);*/
+    /*skew works off angles*/
+    /*transform: skewX(30deg);*/
+    /*transform: rotateX(180deg);*/
+    /*transform: rotateZ(180deg);*/
+    transform: translate(200px, 200px) scale(1.5,1.5);
+
+  }
+
+
+</style>
+
+
+<div class="box">Box</div>

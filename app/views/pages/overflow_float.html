@@ -1,0 +1,106 @@
+<!-- Sometimes am element doesnt fit within its area and displays outside of its box, this is where you use css overflow property
+specifies whether to clip content or add scroll bars when an. element is too big to fit in the specified area
+
+visible
+hidden
+auto
+scroll
+
+works for block level element with a given height
+
+
+ -->
+
+
+<!-- <style>
+  div {
+  width: 400px;
+  height: 200px;
+  border:5px solid green;
+  background-color: #ccc;
+  overflow-x: scroll;
+  overflow: auto;
+  creates scrollbar either way
+  overflow: scroll;
+  }
+</style> -->
+
+
+
+<!--  <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. enim, reprehenderit et facere esse, maiores.</div> -->
+
+
+
+<!--
+
+float allows you to pop out the element from the flow of the page, and place it as far to the left or right of the containing element as possible
+When using float, you should also use width to determine how wide the float element should be
+
+
+To fix problem with float on container border (its popped out from the flow) there are three ways
+Use overflow with value of auto, Container will recognize its child elements
+Or, create new element under child elements, ie; A clear element with clear both
+Or, the clearfix hack. Assign clearfix to parent container by using pseudo element 'after' given new content after children
+
+
+ -->
+
+
+
+<style>
+  .container {
+    background-color: #ccc;
+    /*if using float, you have to set top and bottom*/
+    border-top: 30px solid blue;
+    border-bottom: 20px solid black;
+    /*overflow: auto;*/
+  }
+
+.left {
+  background-color: orangered;
+  width: 100px;
+  height: 100px;
+  float: left;
+}
+
+.right {
+  background-color: green;
+  width: 100px;
+  height: 100px;
+  float: right;
+}
+
+/*.clear {
+  clear: both;
+}*/
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+
+</style>
+
+
+
+<div class="container clearfix">
+  <div class="left"></div>
+  <div class="right"></div>
+  <!-- <div class="clear"></div> -->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

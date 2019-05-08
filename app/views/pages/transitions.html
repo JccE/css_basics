@@ -1,0 +1,48 @@
+<!-- transitions have 4 properties
+
+these properties are mandatory for transitions
+transition-property defines a prop you want to assign an effect to
+transition-duration defines how long you want transition to continue
+
+transition-delay allows a timed effect
+transition-timing-function defines different things happening as transition happens
+
+
+
+ -->
+
+<style>
+  .box {
+    width: 200px;
+    height: 200px;
+    background-color: orangered;
+    transition-property: width;
+    transition-duration: 1s;
+    transition-delay: .3s;
+    /*default value is ease*/
+    /*transition-timing-function: ease;*/
+    /*same speed from start to end*/
+    /*transition-timing-function: linear;*/
+    /*has a slow start*/
+    /*transition-timing-function: ease-in;*/
+    /*transition-timing-function: ease-out;*/
+    /*transition-timing-function: ease-in-out;*/
+    /*to define a speed manually, we use cubic-bizier*/
+    /*kind of line asdr */
+    /*transition-timing-function: cubic-bezier(.02,.97,.67,.32);*/
+    /*transition: width 1s 1s cubic-bezier(.02,.97,.67,.32);*/
+    /*if you want to add multiple args from hover*/
+    transition: width 1s cubic-bezier(.02,.97,.67,.32), background-color 5s;
+
+
+  }
+
+  .box:hover {
+    width: 400px;
+    background-color: blue;
+  }
+
+
+</style>
+
+ <div class="box"></div>

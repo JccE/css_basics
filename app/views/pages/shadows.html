@@ -1,0 +1,64 @@
+
+<!--
+
+Text-shadow is used with text
+
+Box-shadow is used with boxes
+
+ -->
+
+
+
+<style>
+
+  .heading {
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 55px;
+    text-align: center;
+    color: #555;
+    /*have to use two properties*/
+    /*first means shadow is placed on the right side of the text*/
+    /*second value moves shadow vertically*/
+    /*third value is for blur*/
+    /*and we can change color of shadow*/
+    /*text-shadow: -60px 40px 10px green;*/
+    /*make it look better*/
+    text-shadow: 3px 3px 10px #888;
+
+  }
+
+  .card {
+    /*image doesnt take into account width of parent element*/
+    width: 400px;
+    margin: 100px auto;
+    background-color: #ccc;
+    padding: 5px;
+    /*put heading in center*/
+    text-align: center;
+    box-shadow: 5px 5px 10px #777;
+    /*transition: .5s;*/
+  }
+
+
+  .card:hover {
+    box-shadow: 10px 10px 20px #aaa;
+  }
+
+  .card img {
+    width: 100%;
+  }
+
+</style>
+
+
+
+
+<h1 class="heading">This is heading with shadow</h1>
+
+<div class="card">
+  <img src="assets/image.jpeg">
+  <h2>My Class</h2>
+</div>
+
+
+
