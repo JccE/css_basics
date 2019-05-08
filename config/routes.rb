@@ -31,4 +31,6 @@ Rails.application.routes.draw do
 
   get 'animations', to: 'pages#animations'
 
+  get 'flexbox', to: 'pages#flexbox'
+
 end

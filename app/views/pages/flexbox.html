@@ -1,0 +1,180 @@
+<!--
+Layout is CSS
+
+Floats are:
+less popular
+inconvenient way
+needs much effort
+
+Flexbox | Grid
+Extremely popular
+easy and convenient
+flexible
+
+Flexbox:
+A new modern technique
+improves the way of layout
+allows us to avoid use of floats
+Used to manage alignment of items, directions and order in the container
+
+Have to understand the relationship between Flex Container and Flex items
+Set display as flex or inline-flex
+Then has influence on its child items
+
+Main Axis is left to right
+Cross axis is top to bottom
+
+***** Flex Container
+
+flex-direction defines direction container sets for its flex items
+flex-directionL row | row-reverse | column | column-reverse
+
+flex-wrap defines single or multiple lines
+flex-wrap: nowrap | wrap
+
+flex-flow is combo of flex-direction and flex-wrap
+flex-flow: row wrap
+
+justify-content allows us to align along the main-axis.
+at beginning, center or end of it
+justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly
+
+align-items is like above but for cross-axis
+align-items: stretch | flex-start | flex-end | center | baseline
+
+align-content like justify-content but used where there is extra spacd along the cross-axis
+align-content: stretch | flex-start | flex-end | center | space-between | space-around
+
+***** Felx Items
+order: 0 | number
+
+to override individual flex item
+align-self: auto | stretch | flex-start | flex-end | center | baseline
+
+change size of flex items by:
+flex-grow: 0 | number
+flex-basis: auto | length
+flex-shrink: 1 | number
+or:
+flex: 0 1 auto
+
+
+ -->
+
+
+<style>
+  .container {
+    height: 700px;
+    margin-top: 50px;
+    /*padding: 30px 0;*/
+    background-color: #f1986f;
+    /*then add flex*/
+    /*display: flex;*/
+    /*they act like in-line elements*/
+    /*it takes up as much width that is required to display its content*/
+    /*display: inline-flex;*/
+    display: flex;
+    /*set along main axis*/
+    /*flex-direction: row-reverse;*/
+    /*main axis and cross axis change positions*/
+    /*columns take full width available in container*/
+    /*flex-direction: column;*/
+    /*if you reduce the screen size it starts to look funky*/
+    /*because default wrap is no wrap*/
+    /*flex-flow: row wrap;*/
+    flex-direction: row;
+    /*flex-wrap: nowrap;*/
+    /*flex-wrap: wrap;*/
+    /*wrap doesn't allow items to shrink*/
+    flex-wrap: nowrap;
+    /*justify-content: center;*/
+    /* *******these wont work with flex-direction column unless elemts are huge? */
+    /*justify-content: flex-end;*/
+    /*justify-content: space-between;*/
+    /*justify-content: space-around;*/
+    justify-content: space-evenly;
+    /*working horizontally*/
+    /*default of stretch*/
+    /*align-items: stretch;*/
+    /*align-items: flex-start;*/
+    /*align-items: center;*/
+    /*align-items: flex-end;*/
+    /*baseline allows for element to be aligned via text*/
+    /*align-items: baseline;*/
+    /*position on left side of screen*/
+    align-items: center;
+    /*align content helps to manage content of wrapped items*/
+    /*align-content gives you all the stuff*/
+    /*align-content: space-evenly;*/
+  }
+
+
+/*get same styles per item*/
+  .item {
+    width: 70px;
+    padding: 30px;
+    margin: 10px;
+    background-color: #068f8f;
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+  }
+
+  .item-1 {
+    width:200px;
+    /*by default item 1 has order of 0*/
+    /*order: 0;*/
+    /*places first item at end because item a has a higher order value than other items*/
+    order: 1;
+    /*flex-grow: 5;*/
+  }
+
+  .item-5 {
+    width:200px;
+    /*places item at first value because -1 is the lowest order value*/
+    order: -1;
+    /*pops out from row*/
+    /*align-self: flex-start;*/
+    /*place at the bottom*/
+    /*align-self: flex-end;*/
+    /*item is stretched from top to bottom*/
+    /*align-self: stretch;*/
+    /* how fast the element will grow compared to the rest of the items */
+    /*default 0*/
+    /* set at 1, it will occupy as much space as it can as page size expands*/
+    /*determines how much faster the width of an el will grow*/
+    /*5x faster? set it to 5*/
+    /*flex-grow: 1;*
+    /*opposite of flex-grow*/
+    /*value of 0 wont shrink */
+    /*flex-shrink: 0;*/
+    /*shrinks 5 times as fast*/
+    /*flex-shrink: 5;*/
+    /*flex basis goes off of width and height*/
+    /*flex-basis: auto;*/
+    /*flex-basis: 100px;*/
+    /*of course there is the shortcut way*/
+    flex: 0 1 auto;
+  }
+
+
+</style>
+
+
+
+<div class="container">
+  <div class="item item-1">A</div>
+  <div class="item item-2">B</div>
+  <div class="item item-3">C</div>
+  <div class="item item-4">D</div>
+  <div class="item item-5">E</div>
+</div>
+
+
+
+
+
+
+
+
+

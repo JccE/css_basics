@@ -46,4 +46,7 @@ class PagesController < ApplicationController
 
   def animations
   end
+
+  def flexbox
+  end
 end
